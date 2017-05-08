@@ -12,7 +12,7 @@ rabbit-console项目对RabbitMQ HTTP API进行了java封装，使得我们可以
  引入项目依赖
 ----------
 
-	 1、clone项目到本地：`$ git clone git@10.2.1.84:cps-ocean/rabbitmq-console.git`
+	 1、clone项目到本地：`$ git clone xxx`
 
 	 2、在项目根路径运行:`$ mvn clean package -DskipTests`，/target下将产生jar包
 
