@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<configuration>
+    <!-- 输出源配置 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="file" class="ch.qos.logback.core.FileAppender">
+        <file>log/demo.file.log</file>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 日志记录器配置，表示com.kyh下的日志打印级别到debug -->
+    <logger name="augtek.rabbitmq" level="DEBUG"/>
+
+    <!-- root-logger默认的log打印级别是INFO -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="file" />
+    </root>
+</configuration>
